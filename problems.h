@@ -1,5 +1,6 @@
 void days2years(int &days,int &years) {
-    years = days / 365;    days = days % 365;
+    years = days / 365;
+    days = days % 365;
 }
 
 double func(double *x,double *y) {
@@ -21,6 +22,10 @@ double probability(int *y,int *w) {
 
 int presses(int *x) {
     int dgt = *x % 10, n = 0;
-    for (int i = 1; i<=dgt; i++){   for (int j = 1; j <= (i == dgt ? to_string(*x).length() : 4); j++){ n += j;}    }
+    for (int i = 1; i<=dgt; i++){
+        for (int j = 1; j <= (i == dgt ? to_string(*x).length() : 4); j++){ 
+            n += j;
+        }
+    }
     return n;
 }
