@@ -15,11 +15,7 @@ int minsNewYear(int *hour, int *min) {
 }
 
 double probability(int *y,int *w) {
-    int cnt = 0;
-    for (int i = 1; i <= 6; i++){
-        cnt += (i> *y && i> *w || i==*y || i==*w ? 1 : 0);
-    }
-    return double(cnt)/6;
+    return (7-max(*y, *w))/6.;
 }
 
 int presses(int *x) {
